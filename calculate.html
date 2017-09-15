@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>计算器</title>
+<script type="text/javascript" src="calculate.js"></script>
+</head>
+<style>
+	#main{
+		width: 500px;
+		height:600px;
+		border: 1px solid #49F9E1;
+		background-color: aqua;
+		margin: auto;
+		box-shadow: 15px 15px 15px #888888;
+		border-radius: 30px;
+	}
+	#numscreen{
+		width:400px;
+		height: 50px;
+		border: #56FD54;
+		background-color: #ECE6E6;
+		margin: auto; 
+		margin-top: 60px;
+		margin-left: 50px;
+		text-align: right;
+		font-size: 30px;
+		line-height: 50px;
+	}
+	#button{
+		width:450px;
+		height: 380px;
+		border: 1px solid #7FF882;
+		background-color: aquamarine;
+		margin: auto;
+		margin-top: 40px;
+		border-radius: 30px;
+	}
+	#button_ul1{
+		width: 400px;
+		height: 50px;
+		border: 0px solid none;
+		margin: auto;
+		margin-top: 50px;
+	}
+	#button_ul2{
+		width:400px;
+		height: 50px;
+		border: 0px solid #E42326;
+		margin: auto;
+		margin-top: 38px;
+	}
+	#button_ul3{
+		width:400px;
+		height:50px;
+		border: 0px solid  #F56C6E;
+		margin: auto;
+		margin-top: 38px;
+	}
+	#button_ul4{
+		width:400px;
+		height: 50px;
+		border: 0px solid #E43134;
+		margin: auto;
+		margin-top: 38px;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		width: 50px;
+		height: 50px;
+		float: left;
+		margin: auto;
+		margin-right: 30px;
+		list-style: 50px;
+		background-color: #88FB7A;
+		font-size: 24px;
+		line-height: 50px;
+		text-align: center;
+	}
+	
+</style>
+<body>
+
+	<div id="main">
+		<input type="text"  id="numscreen" value="0" onFocus="this.blur()"> 
+		<div id="button">
+			<ul id="button_ul1">
+				<li id="7"  onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(7)">7</li>
+				<li id="8" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(8)">8</li>
+				<li id="9" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(9)">9</li>
+				<li id="del"  onClick="del()" onMouseDown="omover(this)" onMouseUp="omout(this)">&larr;</li>
+				<li id="C" onClick="clearscreen()" onMouseDown="omover(this)" onMouseUp="omout(this)" >C</li>
+			</ul>
+			<ul id="button_ul2">
+				<li id="4" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(4)">4</li>
+				<li id="5" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(5)">5</li>
+				<li id="6" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(6)">6</li>
+				<li id="*" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="multiply()" >*</li>
+				<li id="/" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="divide()" >/</li>
+			</ul>
+			<ul id="button_ul3">
+				<li id="1" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(1)">1</li>
+				<li id="2" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(2)" >2</li>
+				<li id="3" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="command(3)">3</li>
+				<li id="+" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="plus()">+</li>
+				<li id="-" onMouseDown="omover(this)" onMouseUp="omout(this)" onClick="reduce()">-</li>
+			</ul>
+			<ul id="button_ul4">
+				<li id="0" onClick="OneZero()" onMouseDown="omover(this)" onMouseUp="omout(this)" >0</li>
+				<li id="00" onClick="TwoZero()" onMouseDown="omover(this)" onMouseUp="omout(this)">00</li>
+				<li id="." onClick="point()" nMouseDown="omover(this)" onMouseOut="omout(this)">.</li>
+				<li id="%" onClick="persent()" onMouseDown="omover(this)" onMouseUp="omout(this)">%</li>
+				<li id="=" onClick="equal()" onMouseDown="omover(this)" onMouseUp="omout(this)">=</li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>
